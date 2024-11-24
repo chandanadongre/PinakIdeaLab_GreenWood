@@ -56,8 +56,8 @@ function initializeHeaderEvents() {
 
 // Load header, footer and other content
 Promise.all([
-    fetch('../dynamic/header.html').then(response => response.text()),
-    fetch('../dynamic/footer.html').then(response => response.text()),
+    fetch('/header.html').then(response => response.text()),
+    fetch('/footer.html').then(response => response.text()),
     fetch('../blog.html').then(response => response.text())
 ]).then(([headerData, footerData, blogsData]) => {
     // Insert the content
